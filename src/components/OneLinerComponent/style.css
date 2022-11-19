@@ -1,0 +1,11 @@
+textarea {
+  min-width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+textarea:focus {
+  background: #EEEEEE;
+}

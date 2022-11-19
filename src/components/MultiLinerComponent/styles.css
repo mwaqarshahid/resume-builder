@@ -1,0 +1,43 @@
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.multi-input-box {
+  position: relative;
+}
+
+.multi-input-box:hover > div {
+  border: 1px dashed rgba(255, 99, 123, .25);
+}
+
+.multi-input-btn {
+  display: none;
+  position: absolute;
+  top: -8px;
+  right: 0;
+  border: none;
+  outline: none;
+  padding: 11px 6px;
+  border-radius: 50%;
+  color: white;
+  line-height: 0;
+}
+
+.multi-input-btn.add {
+  background: green;
+}
+
+.multi-input-btn.delete {
+  background: red;
+}
+
+.multi-input-box > .multi-input-btn.add + .multi-input-btn.delete {
+  right: 25px;
+}
+
+.multi-input-box:hover > .multi-input-btn {
+  display: block;
+}

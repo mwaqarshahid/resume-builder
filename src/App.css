@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+.app {
+  background-color: #EFEFEF;
+  padding: 40px;
+  font-family: 'Roboto Slab', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-container {
+  width: 794px;
+  height: 1122px;
+  padding: 20px;
+  background: white;
+  display: block;
+  box-shadow: 11px 1px 14px 15px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 11px 1px 14px 15px rgba(0,0,0,0.08);
+  -moz-box-shadow: 11px 1px 14px 15px rgba(0,0,0,0.08);
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container > * {
+  margin-top: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.line-break {
+  width: 100%;
+  border: 1px solid black;
+}
+
+u {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+input, select {
+  outline: none;
+  border: none;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus, select:focus {
+  background: #EEEEEE;
+}
+
+select:hover {
+  cursor: text;
+}
+
+select.without-icon {
+  appearance:none;
+  background-image:url('');
+  text-overflow:'';
+  text-indent: 0.01px;
+  text-overflow: "";
+}
+
+.skill-box {
+  position: relative;
+  padding: 4px;
+  padding-left: 20px;
+}
+
+.skill-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+  margin: auto 0;
+  height: 8px;
+  width: 8px;
+  background: rgb(241, 98, 98);
+  border-radius: 50%;
+}
+
+.skill-box:hover {
+  border: 1px dashed rgba(255, 99, 123, .25);
+}
+
+.skill-btn {
+  display: none;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  border: none;
+  outline: none;
+  padding: 11px 6px;
+  border-radius: 50%;
   color: white;
+  line-height: 0;
 }
 
-.App-link {
-  color: #61dafb;
+.skill-btn.add {
+  background: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skill-btn.delete {
+  background: red;
+}
+
+.skill-box > .skill-btn.add + .skill-btn.delete {
+  right: 25px;
+}
+
+.skill-box:hover > .skill-btn {
+  display: block;
 }
